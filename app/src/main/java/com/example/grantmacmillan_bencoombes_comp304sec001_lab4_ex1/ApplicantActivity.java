@@ -37,4 +37,6 @@ public class ApplicantActivity extends AppCompatActivity {
     public void viewClicked(View v){
 
     }
+
+
 }
