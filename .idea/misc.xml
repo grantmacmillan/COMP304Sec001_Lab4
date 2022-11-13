@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Ben/Desktop/College/Mobile Apps COMP304/COMP304Sec001_Lab4/app/src/main/res/layout/activity_main.xml" value="0.27760891590678827" />
+        <entry key="..\:/Mobile Apps Lab 4/COMP304Sec001_Lab4/app/src/main/res/layout/activity_applicant.xml" value="0.5538949275362319" />
+        <entry key="..\:/Mobile Apps Lab 4/COMP304Sec001_Lab4/app/src/main/res/layout/activity_login.xml" value="0.5538949275362319" />
+        <entry key="..\:/Mobile Apps Lab 4/COMP304Sec001_Lab4/app/src/main/res/layout/activity_main.xml" value="0.5538949275362319" />
       </map>
     </option>
   </component>
