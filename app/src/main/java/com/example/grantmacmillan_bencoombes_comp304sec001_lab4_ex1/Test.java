@@ -1,8 +1,10 @@
 package com.example.grantmacmillan_bencoombes_comp304sec001_lab4_ex1;
 
 import androidx.room.ColumnInfo;
+import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+@Entity
 public class Test {
     @PrimaryKey
     int testId;
