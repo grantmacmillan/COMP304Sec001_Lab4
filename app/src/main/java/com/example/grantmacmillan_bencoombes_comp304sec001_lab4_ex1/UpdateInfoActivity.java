@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ListView;
 
 public class UpdateInfoActivity extends AppCompatActivity {
 
@@ -14,7 +15,7 @@ public class UpdateInfoActivity extends AppCompatActivity {
     EditText lastName;
     EditText testCenter;
     EditText examinerID;
-    RecyclerView recyclerView;
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +27,7 @@ public class UpdateInfoActivity extends AppCompatActivity {
         lastName = findViewById(R.id.lastName);
         testCenter = findViewById(R.id.testCenter);
         examinerID = findViewById(R.id.examinerID);
-        recyclerView = findViewById(R.id.recyclerView);
+        listView = findViewById(R.id.listView);
     }
 
     public void UpdateClicked(View v){

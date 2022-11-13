@@ -6,11 +6,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ListView;
 
 public class ViewTestInfoActivity extends AppCompatActivity {
 
     EditText applicantID;
-    RecyclerView recyclerView;
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +19,7 @@ public class ViewTestInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view_test_info);
 
         applicantID = findViewById(R.id.applicantID);
-        recyclerView = findViewById(R.id.recyclerView);
+        listView = findViewById(R.id.listView);
     }
 
     public void ViewClicked(View v){
