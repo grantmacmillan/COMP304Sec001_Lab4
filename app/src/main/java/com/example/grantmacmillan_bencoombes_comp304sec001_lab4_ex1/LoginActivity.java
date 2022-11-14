@@ -3,6 +3,7 @@ package com.example.grantmacmillan_bencoombes_comp304sec001_lab4_ex1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -15,6 +16,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText username;
     EditText password;
     AppDao doa;
+    int loginId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +35,17 @@ public class LoginActivity extends AppCompatActivity {
             String examinerPassword = examinerList.get(i).password;
             if(Integer.parseInt(username.getText().toString()) == id) {
                 if(password.getText().toString().equals(examinerPassword)) {
+                    loginId = id;
                     boolLogin = true;
                 }
             }
         }
         if(boolLogin) {
+            SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.remove("examinerId");
+            editor.putInt("examinerId", loginId);
+            editor.commit();
             Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
         } else {
