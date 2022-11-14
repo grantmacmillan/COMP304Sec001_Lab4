@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.sql.Array;
 import java.util.ArrayList;
@@ -44,6 +45,8 @@ public class ApplicantActivity extends AppCompatActivity {
         int eId = Integer.parseInt(examinerID.getText().toString());
         Applicant applicant = new Applicant(aId, fN, lN, tC, eId);
         doa.insertApplicant(applicant);
+
+        Toast.makeText(this, "Applicant Added to Database", Toast.LENGTH_SHORT).show();
     }
 
     public void viewClicked(View v) {
@@ -57,6 +60,7 @@ public class ApplicantActivity extends AppCompatActivity {
 
         ArrayAdapter arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, applicantView);
         listView.setAdapter(arrayAdapter);
+        Toast.makeText(this, "Viewing Applicants", Toast.LENGTH_SHORT).show();
     }
 
 
