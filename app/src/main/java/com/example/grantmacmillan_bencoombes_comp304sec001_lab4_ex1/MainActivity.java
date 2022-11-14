@@ -9,10 +9,12 @@ import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    AppDao dao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        dao = AppDatabase.getInstance(this).appDao();
     }
 
     public void button1Clicked(View v) {
@@ -52,5 +54,12 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Please Login", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void PopulateExaminers() {
+        Examiner examiner = new Examiner(1, "Ben", "Coombes", "Markham", "1234");
+        Examiner examiner1 = new Examiner(2, "Grant", "MacMillan", "Stouffville", "1234");
+        dao.insertExaminer(examiner);
+        dao.insertExaminer(examiner1);
     }
 }
