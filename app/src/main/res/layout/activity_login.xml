@@ -5,13 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:layout_marginRight="64dp"
+    android:layout_marginLeft="64dp"
     tools:context=".LoginActivity">
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:src="@drawable/drivetest" />
+    </LinearLayout>
     <LinearLayout
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
